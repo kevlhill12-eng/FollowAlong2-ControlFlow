@@ -13,19 +13,27 @@ package part06;
 //
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
-
+// Defines the public class named IfStatements
 public class IfStatements {
+    // Main method where program execution begins
     public static void main(String[] args) {
-        int age = 12;
+        // Declares an integer variable 'age' and assigns it the value 12
 
-        if( age >= 18 ){
-            System.out.println("You are an adult!");
-        } else if( age == 75) {
+        int age = 12;
+        // Checks if age is exactly 75
+        if (age >= 18) { // Checks if age is greater than or equal to 18
+            System.out.println("You are an adult!"); // Prints this message if the condition is true
+        } else if (age == 75) {
+            // Prints this message if the condition is true
             System.out.println("OK boomer");
-        } else if(age >= 13){
+            // Checks if age is greater than or equal to 13
+        } else if (age >= 13) {
+            // Prints this message if the condition is true
             System.out.println("You are a teenager!");
-        }else {
+        } else {
+            // Executes if none of the above conditions are true
             System.out.println("You are not an adult!");
+
         }
     }
 }
