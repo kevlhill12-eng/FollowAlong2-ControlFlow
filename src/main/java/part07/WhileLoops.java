@@ -16,22 +16,22 @@ import java.util.Scanner;
 //
 // If your program never stops: click the red square (Stop) in the Run window.
 
-public class WhileLoops {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class WhileLoops { // Defines the public class named WhileLoops
+    public static void main(String[] args) { // Main method where program execution begins
+        Scanner scanner = new Scanner(System.in); // Creates a Scanner object to read user input from the console
 
-        String name = "";
+        String name = ""; // Declares a String variable 'name' and initializes it as an empty string
 
-        while (name.isBlank()) {
-            System.out.print("Enter your name: ");
-            name = scanner.nextLine();
-        }
-        System.out.println("Hello " + name);
-        do {
-            System.out.print("Enter your name: ");
-            name = scanner.nextLine();
+        while (name.isBlank()) { // Starts a while loop that runs as long as 'name' is blank or empty
+            System.out.print("Enter your name: "); // Prompts the user to enter their name without moving to a new line
+            name = scanner.nextLine(); // Reads the text entered by the user and assigns it to 'name'
+        } // Closes the while loop block
+        System.out.println("Hello " + name); // Prints a greeting message combined with the user's name
+        do { // Starts a do-while loop block that executes at least once before checking the condition
+            System.out.print("Enter your name: "); // Prompts the user again to enter their name
 
-        } while (name.isBlank());
+            name = scanner.nextLine(); // Reads the new text entered by the user and assigns it to 'name'
 
-    }
-}
+        } while (name.isBlank()); // Checks the condition at the end of the loop, repeating if 'name' is still blank
+    } // Closes the main method block
+} // Closes the class block

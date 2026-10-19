@@ -14,25 +14,25 @@ import java.util.Scanner;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
 
-public class LogicalOperators {
-    public static void main(String[] args) {
+public class LogicalOperators { // Defines the public class named LogicalOperators
+    public static void main(String[] args) { // Main method where program execution begins
 
-        int temp = 25;
-        if (temp > 30) {
-            System.out.println("It is hot outside!");
-        } else if (temp >= 20 && temp <= 30) {
-            System.out.println("It is warm outside!");
-        } else {
-            System.out.println("It is cold outside!");
+        int temp = 25; // Declares an integer variable 'temp' and assigns it the value 25
+        if (temp > 30) { // Checks if temp is greater than 30
+            System.out.println("It is hot outside!"); // Prints this message if the condition is true
+        } else if (temp >= 20 && temp <= 30) { // Checks if temp is between 20 and 30 inclusive using the logical AND operator (&&)
+            System.out.println("It is warm outside!"); // Prints this message if the condition is true
+        } else { // Executes if none of the above conditions are true
+            System.out.println("It is cold outside!"); // Prints this message as the fallback
         }
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("You are playing a game! Press q or Q to quit");
-        String response = scanner.next();
+        Scanner scanner = new Scanner(System.in); // Creates a Scanner object to read user input from the console
+        System.out.println("You are playing a game! Press q or Q to quit"); // Prompts the user to press 'q' or 'Q' to quit
+        String response = scanner.next(); // Reads the next token of input from the user and assigns it to 'response'
 
-        if (response.equals("q") || response.equals("Q")) {
-            System.out.println("You quit the game");
-        } else {
-            System.out.println("You are still playing the game *pew pew*");
+        if (response.equals("q") || response.equals("Q")) { // Checks if response equals "q" or "Q" using the logical OR operator (||)
+            System.out.println("You quit the game"); // Prints this message if either condition is true
+        } else { // Executes if the user did not enter 'q' or 'Q'
+            System.out.println("You are still playing the game *pew pew*"); // Prints this message if the condition is false
         }
 
     }
