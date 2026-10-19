@@ -1,5 +1,5 @@
 package part07;
-
+import java.util.Scanner;
 // Video: https://www.youtube.com/watch?v=xk4_1vDrzzo&t=5302s
 //        while loops start at about 88:22 — stop at about 91:54
 // Guide: GUIDE.md in this folder, steps 7–11
@@ -17,5 +17,21 @@ package part07;
 // If your program never stops: click the red square (Stop) in the Run window.
 
 public class WhileLoops {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        String name = "";
+
+        while (name.isBlank()) {
+            System.out.print("Enter your name: ");
+            name = scanner.nextLine();
+        }
+        System.out.println("Hello " + name);
+        do {
+            System.out.print("Enter your name: ");
+            name = scanner.nextLine();
+
+        } while (name.isBlank());
+
+    }
 }
