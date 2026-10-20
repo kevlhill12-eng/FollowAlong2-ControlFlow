@@ -1,5 +1,8 @@
 package part09;
 
+import java.util.Random;
+import java.util.Scanner;
+
 // Part 09 — CHECKPOINT. No video in this part.
 // Video (only if you need a reminder): https://www.youtube.com/watch?v=xk4_1vDrzzo
 //   user input (Scanner) — part 03 · random numbers — part 05
@@ -13,6 +16,34 @@ package part09;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does.
 
-public class GuessingGame {
 
+public class GuessingGame {
+    public static void main(String[] args) {
+
+
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        int secretNumber = random.nextInt(100) + 1;
+        int guess = 0;
+        int guessesCount = 0;
+
+        System.out.println("I'm thinking of a number between 1 and 100.");
+
+        while (guess != secretNumber) {
+            System.out.print("Your guess: ");
+            guess = scanner.nextInt();
+            guessesCount++;
+
+            if (guess > secretNumber) {
+                System.out.println("Too high!");
+            } else if (guess < secretNumber) {
+                System.out.println("Too low!");
+            } else {
+                System.out.println("Correct! You got it in " + guessesCount + " guesses.");
+            }
+        }
+    }
 }
+
+
