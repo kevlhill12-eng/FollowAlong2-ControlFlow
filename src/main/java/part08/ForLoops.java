@@ -15,24 +15,24 @@ package part08;
 
 public class ForLoops {
     public static void main(String[] args) {
-        for (int i = 0; i <= 10; i++){
-            System.out.println(i);
+        for (int i = 0; i <= 10; i++){ // count up from 0 to 10
+            System.out.println(i); // print the current number
         }
 
-        for (int i = 10; i >= 0; i--){
-            System.out.println(i);
+        for (int i = 10; i >= 0; i--){ // count down from 10 to 0 by ones
+            System.out.println(i); // print the countdown number
         }
-        System.out.println("Happy New Year!");
+        System.out.println("Happy New Year!"); // print the celebration message
 
-        for (int i = 10; i >= 0; i-= 2){
-            System.out.println(i);
+        for (int i = 10; i >= 0; i-= 2){ // count down from 10 to 0 by twos
+            System.out.println(i); // print the current number
         }
-        System.out.println("Happy New Year!");
+        System.out.println("Happy New Year!"); // print the celebration message again
 
-        for (int i = 10; i >= 0;) {
-            System.out.println(i);
-            i -= 2;
+        for (int i = 10; i >= 0;) { // count down starting at 10 with no update in the header
+            System.out.println(i); // print the number
+            i -= 2; // manually decrement by 2 inside the loop body
         }
-        System.out.println("Happy New Year!");
+        System.out.println("Happy New Year!"); // print the final celebration message
     }
 }
