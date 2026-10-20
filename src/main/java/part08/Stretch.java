@@ -7,7 +7,43 @@ package part08;
 // SECTION C — Stretch. Do Stretch A, then Stretch B. The README says what each one should print.
 //
 // There is no main method here yet. Typing it is part of the stretch.
-
+/*
+1 2 3
+i is 5
+i is 3
+i is 1
+***
+***
+ */
 public class Stretch {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 3; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int i = 5; i > 0; i -= 2) {
+            System.out.println("i is " + i);
+        }
+        for (int i = 1; i <= 2; i++) {
+            for (int j = 1; j <= 3; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for(int i = 5; i > 0; i-- ){
+            System.out.println(i);
+        }
+        System.out.println("Liftoff!");
+
+        for(int i = 1; i <= 5; i++){
+            for (int j = 1; j <= 5; j++){
+                System.out.print((j * i) + "\t");
+            }
+
+            System.out.println();
+        }
+
+    }
 
 }
