@@ -17,33 +17,32 @@ import java.util.Scanner;
 //    saying in YOUR OWN WORDS what that line does.
 
 
-public class GuessingGame {
-    public static void main(String[] args) {
+public class GuessingGame { // define the class
+    public static void main(String[] args) { // main method entry point
 
+        Scanner scanner = new Scanner(System.in); // create a scanner object to read user input
+        Random random = new Random(); // create a random object to generate numbers
 
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
+        int secretNumber = random.nextInt(100) + 1; // generate a random secret number from 1 to 100
+        int guess = 0; // initialize the user guess variable to 0
+        int guessesCount = 0; // initialize the guess counter to 0
 
-        int secretNumber = random.nextInt(100) + 1;
-        int guess = 0;
-        int guessesCount = 0;
+        System.out.println("I'm thinking of a number between 1 and 100."); // print the game intro message
 
-        System.out.println("I'm thinking of a number between 1 and 100.");
+        while (guess != secretNumber) { // loop as long as the guess is wrong
+            System.out.print("Your guess: "); // prompt the user to enter a guess
+            guess = scanner.nextInt(); // read the user's integer guess
+            guessesCount++; // add one to the total guess count
 
-        while (guess != secretNumber) {
-            System.out.print("Your guess: ");
-            guess = scanner.nextInt();
-            guessesCount++;
-
-            if (guess > secretNumber) {
-                System.out.println("Too high!");
-            } else if (guess < secretNumber) {
-                System.out.println("Too low!");
-            } else {
-                System.out.println("Correct! You got it in " + guessesCount + " guesses.");
-            }
-        }
-    }
-}
+            if (guess > secretNumber) { // check if the guess is higher than the secret number
+                System.out.println("Too high!"); // print that the guess was too high
+            } else if (guess < secretNumber) { // check if the guess is lower than the secret number
+                System.out.println("Too low!"); // print that the guess was too low
+            } else { // if it's not high or low, it must be right
+                System.out.println("Correct! You got it in " + guessesCount + " guesses."); // print win message with count
+            } // end of if-else block
+        } // end of while loop
+    } // end of main method
+} // end of class
 
 
